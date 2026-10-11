@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/static/css/app.css"><title>Open an account | BankPro</title></head>
+<body data-page="register">
+<div class="auth">
+  <aside class="auth-side">
+    <a class="brand" href="/"><span data-logo></span><span>BankPro</span></a>
+    <div><h2>Open your account in a minute.</h2><ul><li>You get a unique customer ID and account number</li><li>Your new account starts with a zero balance</li><li>Your password is hashed &mdash; nobody can read it, not even us</li></ul></div>
+    <div class="small side-note">Educational simulation &mdash; do not use real financial details.</div>
+  </aside>
+  <main class="auth-main"><div class="auth-card">
+    <div id="formView">
+      <h1>Create your account</h1><p class="muted">Customer Banking</p>
+      <form id="form" novalidate>
+        <div class="form-alert hidden"></div>
+        <div class="field"><label for="fullName">Full name</label><input class="input" id="fullName" name="fullName" autocomplete="name" maxlength="60" required><div class="field-error" data-error-for="fullName"></div></div>
+        <div class="field"><label for="email">Email address</label><input class="input" id="email" name="email" type="email" autocomplete="email" required><div class="field-error" data-error-for="email"></div></div>
+        <div class="field"><label for="phone">Phone number</label><input class="input" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" required><div class="field-error" data-error-for="phone"></div></div>
+        <div class="field"><label for="password">Password</label><div class="input-wrap"><input class="input" id="password" name="password" type="password" autocomplete="new-password" required><button type="button" class="eye" data-toggle-password aria-label="Show password"></button></div><div class="meter"><i id="meter"></i></div><div class="hint">At least 8 characters with a letter and a number.</div><div class="field-error" data-error-for="password"></div></div>
+        <div class="field"><label for="confirmPassword">Confirm password</label><div class="input-wrap"><input class="input" id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required><button type="button" class="eye" data-toggle-password aria-label="Show password"></button></div><div class="field-error" data-error-for="confirmPassword"></div></div>
+        <button class="btn btn-block" type="submit">Create account</button>
+      </form>
+      <p class="auth-links">Already have an account? <a href="/login">Sign in</a></p>
+      <p class="auth-links small"><a href="/">&larr; Back to home</a></p>
+    </div>
+    <div id="doneView" class="hidden success-box">
+      <div class="tick" data-i="check"></div><h1>You're all set!</h1>
+      <p class="muted">Your account has been created with a balance of &#8377;0.00.</p>
+      <div class="small muted">Your account number</div><div class="acct-no" id="acctNo"></div>
+      <p class="small muted">Customer ID: <b id="custId"></b></p>
+      <a class="btn btn-block" href="/login?registered=1">Continue to sign in</a>
+    </div>
+  </div></main>
+</div>
+<script src="/static/js/common.js"></script><script src="/static/js/auth.js"></script>
+</body></html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/static/css/app.css"><title>Sign in | BankPro</title></head>
+<body data-page="login">
+<div class="auth">
+  <aside class="auth-side">
+    <a class="brand" href="/"><span data-logo></span><span>BankPro</span></a>
+    <div><h2>Welcome back.</h2><ul><li>See your balance and recent activity</li><li>Deposit, withdraw and transfer in seconds</li><li>Protected by hashed passwords and secure sessions</li></ul></div>
+    <div class="small side-note">Educational simulation &mdash; not a real bank.</div>
+  </aside>
+  <main class="auth-main"><div class="auth-card">
+    <h1>Sign in to your account</h1>
+    <p class="muted">Customer Banking</p>
+    <div class="alert success hidden" id="notice" role="status"></div>
+    <form id="form" novalidate>
+      <div class="form-alert hidden"></div>
+      <div class="field"><label for="email">Email address</label><input class="input" id="email" name="email" type="email" autocomplete="username" required><div class="field-error" data-error-for="email"></div></div>
+      <div class="field"><label for="password">Password</label><div class="input-wrap"><input class="input" id="password" name="password" type="password" autocomplete="current-password" required><button type="button" class="eye" data-toggle-password aria-label="Show password"></button></div><div class="field-error" data-error-for="password"></div></div>
+      <button class="btn btn-block" type="submit">Sign in</button>
+    </form>
+    <p class="auth-links">New to BankPro? <a href="/register">Create an account</a></p>
+    <p class="auth-links small"><a href="/">&larr; Back to home</a> &middot; <a href="/admin-login">Administrator? Sign in here</a></p>
+  </div></main>
+</div>
+<script src="/static/js/common.js"></script><script src="/static/js/auth.js"></script>
+</body></html>

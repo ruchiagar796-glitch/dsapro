@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/static/css/app.css">
+<title>BankPro | Modern digital banking</title>
+<meta name="description" content="BankPro - a secure digital banking platform with separate customer and administrator portals.">
+</head>
+<body data-page="home">
+<header class="hero">
+  <div class="site-head">
+    <a class="brand" href="/"><span data-logo></span><span>BankPro</span></a>
+    <nav><a class="btn btn-sm btn-outline-white" href="/admin-login">Admin Login</a><a class="btn btn-sm btn-white keep" href="/login">Sign in</a></nav>
+  </div>
+  <div class="hero-inner">
+    <div>
+      <h1>Banking that feels <em>effortless</em> and stays secure.</h1>
+      <p class="lead">Open an account in a minute, move money instantly, and see every transaction in one clear place. Built with a security-first C++ backend.</p>
+      <div class="cta">
+        <a class="btn btn-white" href="/login"><span data-i="wallet"></span> Customer Banking</a>
+        <a class="btn btn-outline-white" href="/admin-login"><span data-i="shield"></span> Admin Login</a>
+      </div>
+      <p class="note">New here? <a href="/register" class="link-white">Create a free account</a></p>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="c1"><div class="small op">Total balance</div><div class="big">&#8377; 48,250.00</div><div class="small op">Savings &bull; XXXXXX4821</div></div>
+      <div class="c2"><b>This month</b><div class="small muted">Deposits</div><div class="bar"><i class="p70"></i></div><div class="small muted">Transfers</div><div class="bar"><i class="p45"></i></div></div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="inner">
+    <h2>Two portals, built for two kinds of people</h2>
+    <p class="sub">Customers and administrators sign in separately and see completely different tools.</p>
+    <div class="portals">
+      <div class="portal cust"><h3>Customer Banking</h3><p>Check your balance, deposit, withdraw, transfer to any account and review your full transaction history.</p><div><a class="btn btn-white" href="/login">Sign in</a> <a class="btn btn-outline-white" href="/register">Open an account</a></div></div>
+      <div class="portal adm"><h3>Admin Portal</h3><p>Monitor customers and transactions, search accounts and activate or deactivate accounts with confirmations.</p><div><a class="btn btn-white" href="/admin-login">Admin Login</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section pt0">
+  <div class="inner">
+    <h2>Everything you need to bank</h2>
+    <p class="sub">Simple, fast and clear. No hidden screens, no placeholder numbers.</p>
+    <div class="grid g3">
+      <div class="card feature"><div class="ico" data-i="bolt"></div><h3>Instant transfers</h3><p class="muted">Send money to another account number. Both sides are recorded with one shared reference.</p></div>
+      <div class="card feature"><div class="ico" data-i="activity"></div><h3>Clear history</h3><p class="muted">Filter by deposits, withdrawals, transfers or date range, and see debit and credit at a glance.</p></div>
+      <div class="card feature"><div class="ico" data-i="eye"></div><h3>Private by default</h3><p class="muted">Hide your balance with one tap and see your account number masked until you choose to reveal it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section secure">
+  <div class="inner">
+    <h2>Security is not an add-on</h2>
+    <p class="sub">Every rule is enforced on the server, never just in the browser.</p>
+    <div class="grid g4">
+      <div class="card feature"><div class="ico" data-i="lock"></div><h3>Hashed passwords</h3><p>Argon2id hashing. Plain-text passwords are never stored.</p></div>
+      <div class="card feature"><div class="ico" data-i="shield"></div><h3>Strict access control</h3><p>You can only ever see your own account. Admin tools need an admin session.</p></div>
+      <div class="card feature"><div class="ico" data-i="clock"></div><h3>Safe sessions</h3><p>Random server-side sessions, HttpOnly cookies, CSRF protection and timeouts.</p></div>
+      <div class="card feature"><div class="ico" data-i="file"></div><h3>Consistent records</h3><p>Atomic file writes keep balances and transactions in step, even after a crash.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="inner">
+  <div><b class="white">BankPro</b><br>An educational banking simulation (C++17 DSA &amp; OOP project). It is not a real financial institution &mdash; please do not enter real financial information.</div>
+  <div><a href="/login">Customer sign in</a> &middot; <a href="/register">Register</a> &middot; <a href="/admin-login">Admin</a></div>
+</div></footer>
+<script src="/static/js/common.js"></script><script src="/static/js/auth.js"></script>
+</body></html>

@@ -1,0 +1,21 @@
+# Render "Blueprint": tells Render how to run this project.
+services:
+  - type: web
+    name: bank-management-system
+    runtime: docker
+    plan: free              # FREE: sleeps when idle and DATA IS LOST on restart/redeploy (see DEPLOY.md)
+    healthCheckPath: /healthz
+    envVars:
+      - key: BMS_ADMIN_USERNAME
+        value: admin        # the first administrator's user name (not secret)
+      - key: BMS_ADMIN_PASSWORD
+        sync: false         # SECRET: Render asks you to type it. Minimum 10 characters, a letter and a digit.
+      - key: BMS_TRUST_PROXY
+        value: "1"          # Render's proxy forwards the real client address / https flag
+    # To KEEP customers, balances and transactions between restarts, switch to a paid plan and
+    # enable the disk (the app already stores everything in /data):
+    #   plan: starter
+    #   disk:
+    #     name: bank-data
+    #     mountPath: /data
+    #     sizeGB: 1

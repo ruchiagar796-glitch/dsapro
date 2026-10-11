@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/static/css/app.css"><title>Admin sign in | BankPro</title></head>
+<body data-page="admin-login">
+<div class="auth">
+  <aside class="auth-side admin">
+    <a class="brand" href="/"><span data-logo></span><span>BankPro <small>Admin</small></span></a>
+    <div><h2>Administrator access.</h2><ul><li>Monitor customers, accounts and transactions</li><li>Activate or deactivate accounts</li><li>All actions are verified on the server</li></ul></div>
+    <div class="small side-note">Authorised staff only.</div>
+  </aside>
+  <main class="auth-main"><div class="auth-card">
+    <h1>Admin sign in</h1><p class="muted">Administrator Portal</p>
+    <form id="form" novalidate>
+      <div class="form-alert hidden"></div>
+      <div class="field"><label for="username">Username</label><input class="input" id="username" name="username" autocomplete="username" required><div class="field-error" data-error-for="username"></div></div>
+      <div class="field"><label for="password">Password</label><div class="input-wrap"><input class="input" id="password" name="password" type="password" autocomplete="current-password" required><button type="button" class="eye" data-toggle-password aria-label="Show password"></button></div><div class="field-error" data-error-for="password"></div></div>
+      <button class="btn btn-block" type="submit">Sign in</button>
+    </form>
+    <p class="auth-links small"><a href="/">&larr; Back to home</a> &middot; <a href="/login">Customer sign in</a></p>
+  </div></main>
+</div>
+<script src="/static/js/common.js"></script><script src="/static/js/auth.js"></script>
+</body></html>
